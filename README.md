@@ -70,19 +70,19 @@ Singularity containers, once built, can be saved for further run or can be share
 
 Or simply:
 
-|
+
 
     $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
- |
+ 
 
 1.  Install virtualbox, vagrant and vagrant-manager:
 
-|
+
 
     $  brew  install --cask virtualbox vagrant vagrant-manager
 
- |
+ 
 
 (note that for M1 or M2 chips, the process can be different so it is not covered here)
 
@@ -90,11 +90,11 @@ What I know is that VirtualBox can be installed manually (Developer preview for 
 
 Once VirtualBox installed you can run the following command:
 
-|
+
 
     $  brew install --cask vagrant vagrant-manager
 
- |
+ 
 
 * * * * *
 
@@ -103,12 +103,12 @@ Once VirtualBox installed you can run the following command:
 
 1.  Create and enter a directory to be used with your Vagrant VM:
 
-|
+
 
     $  mkdir  vm-singularity-ce && \\
      cd  vm-singularity-ce
 
- |
+ 
 
 (if it is the first time, skip point 1.4)
 
@@ -116,29 +116,29 @@ Once VirtualBox installed you can run the following command:
 
 If you have already created and used this folder for another VM, you will need to destroy the VM and delete the Vagrantfile:
 
-|
+
 
     $ vagrant destroy && \\
         rm Vagrantfile
 
- |
+ 
 
 1.  Bring up the virtual machine:
 
 Inside the created new repository, create the Vagrantfile with these steps:
 
-|
 
-$ vim Vagrantfile
 
- |
+    $ vim Vagrantfile
+
+ 
 
 The following code is a base for the Vagrantfile. Specify the path/to/destination on the hose and the path/from/vm in the vim. 
 
 When it is done, type ":wq" which stands for "write quit".
 
-|
 
+```
 Vagrant.configure("2") do |config|\
   config.vm.box = "sylabs/singularity-ce-3.8-ubuntu-bionic64"
 
@@ -146,8 +146,8 @@ Vagrant.configure("2") do |config|\
 
   config.vm.synced_folder "./", "/vagrant"\
 end
-
- |
+```
+ 
 
 Once you are back on the terminal, run to force vagrant to recreate the vm:
 
