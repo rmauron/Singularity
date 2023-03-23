@@ -63,7 +63,7 @@ Singularity containers, once built, can be saved for further run or can be share
 
 (for Mac with Intel-64)
 
-  Install homebrew (if not already installed):
+### Install homebrew (if not already installed):
 
 [Install Homebrew](https://brew.sh/)
 
@@ -74,8 +74,7 @@ Or simply:
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
  
-
-  Install virtualbox, vagrant and vagrant-manager:
+### Install virtualbox, vagrant and vagrant-manager:
 
 
 
