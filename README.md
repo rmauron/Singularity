@@ -8,7 +8,7 @@ Note from: Raphaël Mauron (<raphael.mauron@gmail.com>)
 
 
 ## Goals:
-------
+
 
 -   Install Singularity
 
@@ -22,7 +22,7 @@ Being able to run and share scripts with all their dependencies on your machine 
 
 
 ## Resources from UPPMAX IT:
--------------------------
+
 
 All you need to do is described on this recipe but if more resources are needed, here you have interesting links.
 
@@ -35,7 +35,7 @@ Complete UPPMAX workshop material: <https://pmitev.github.io/UPPMAX-Singularity-
 
 
 0.  Why is all this needed?
----------------------------
+
 
 Virtualisation is the technology which allows to create independent environments from your machine. It has many functionalities, like running various systems or applications on a single machine, sharing resources (e.g. processors, memory, etc.)
 
@@ -45,7 +45,7 @@ In this recipe, Vagrant is the tool used to create and manage those environments
 
 
 0.1 Singularity
----------------
+
 
 Singularity is a container virtualization tool made for scientific applications and high performance computing. It is compatible with Docker Images but does not allow for administrative privileges which facilitates the management of HPC clusters. Essentially, the waiting queue system is respected with Singularity while it is not with Docker.
 
@@ -56,7 +56,7 @@ Singularity containers, once built, can be saved for further run or can be share
 
 
 1.  Install Singularity on your machine:
-    ------------------------------------
+    
 
 (for Mac with Intel-64)
 
@@ -95,7 +95,7 @@ Once VirtualBox installed you can run the following command:
 
 
 2.  Create a temporary VM with vagrant for building Singularity containers
-    ----------------------------------------------------------------------
+    
 
   Create and enter a directory to be used with your Vagrant VM:
 
@@ -181,7 +181,7 @@ If you reach this point, you are all set up to build your Singularity container.
 
 
 3.  Build Singularity container
-    ---------------------------
+    
 
 Once in the Singularity VM, you can build a Singularity container.
 
@@ -238,7 +238,7 @@ If everything goes smoothly, you should now have the .def and .sif files. The .d
 
 
 4.  Run Singularity container
-    -------------------------
+    
 
 With the Singularity container built, you can run it. Try the lolcow tutorial.
 
@@ -255,7 +255,7 @@ But here is the idea behind running a Singularity container.
 
 
 5.  Stop and destroy the VM
-    -----------------------
+    
 
 You can stop the VM with:
 
@@ -276,7 +276,7 @@ You might want to destroy the VM. You can do it with (after having stopped it be
 
 
 6.  Prerequisites for running graphical programs remotely with Xquartz
-    ------------------------------------------------------------------
+    
 
 In case of R applications, graphical desktops are more handy. For it, follow the instructions below. This is required to run the ArchR container. <https://www.cyberciti.biz/faq/apple-osx-mountain-lion-mavericks-install-xquartz-server/>
 
@@ -301,7 +301,7 @@ Reboot mac:
 * * * * *
 
 7.  Run Singularity container on HPC
-    --------------------------------
+    
 
 You have to enable the X11 forwarding so we use the "-Y" command when connecting to the HPC:
 
@@ -322,7 +322,7 @@ Or more practically when connecting to UPPMAX:
 
 
 8.  Run the ArchR Singularity container on UPPMAX
-    ---------------------------------------------
+    
 
 From the entry page a.k.a your user directory, run:
 
