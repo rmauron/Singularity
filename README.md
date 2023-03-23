@@ -1,4 +1,4 @@
-Recipe for Singularity
+# Recipe for Singularity
 
 * * * * *
 
@@ -8,7 +8,7 @@ Note from: Raphaël Mauron (<raphael.mauron@gmail.com>)
 
 * * * * *
 
-Goals:
+## Goals:
 ------
 
 -   Install Singularity
@@ -23,7 +23,7 @@ Being able to run and share scripts with all their dependencies on your machine 
 
 * * * * *
 
-Resources from UPPMAX IT:
+## Resources from UPPMAX IT:
 -------------------------
 
 All you need to do is described on this recipe but if more resources are needed, here you have interesting links.
@@ -36,34 +36,34 @@ Complete UPPMAX workshop material: <https://pmitev.github.io/UPPMAX-Singularity-
 
 * * * * *
 
-Table of Contents
+## Table of Contents
 -----------------
 
-[Goals:  1](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.am8navp9x3fi)
+[Goals:  1](#Goals:)
 
-[Resources from UPPMAX IT:  1](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.3bc143d392pl)
+[Resources from UPPMAX IT:  1](#Resources from UPPMAX IT:)
 
-[Table of Contents  2](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.2ca5z7feb232)
+[Table of Contents  2](#Table of Contents)
 
-[0\. Why is all this needed?  3](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.sxngx4hyrf18)
+[0\. Why is all this needed?  3](#0.  Why is all this needed?)
 
-[0.1 Singularity  3](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.pgfbli8ljofu)
+[0.1 Singularity  3](#0.1 Singularity)
 
-[1\. Install Singularity on your machine:  3](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.3uqkbsmv8w4j)
+[1\. Install Singularity on your machine:  3](#1. Install Singularity on your machine:)
 
-[2\. Create a temporary VM with vagrant for building Singularity containers  4](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.rhmtklce6g5v)
+[2\. Create a temporary VM with vagrant for building Singularity containers  4](#2. Create a temporary VM with vagrant for building Singularity containers)
 
-[3\. Build Singularity container  5](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.icpecmo0opm1)
+[3\. Build Singularity container  5](#3. Build Singularity container)
 
-[4\. Run Singularity container  7](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.x9po36lwlehn)
+[4\. Run Singularity container  7](#4. Run Singularity container)
 
-[5\. Stop and destroy the VM  7](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.na1qmdg3iat)
+[5\. Stop and destroy the VM  7](#5. Stop and destroy the VM)
 
-[6\. Prerequisites for running graphical programs remotely with Xquartz  7](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.vl3y5gmy4sr6)
+[6\. Prerequisites for running graphical programs remotely with Xquartz  7](#6. Prerequisites for running graphical programs remotely with Xquartz)
 
-[7\. Run Singularity container on HPC  8](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.n0t3g0opeznf)
+[7\. Run Singularity container on HPC  8](#7. Run Singularity container on HPC)
 
-[8\. Run the ArchR Singularity container on UPPMAX  8](https://docs.google.com/document/d/1UF_H5VbUmnpLbEfJDDZWuuuxZ9KjNuod-MSVtUlgPlk/edit#heading=h.dqay9n5ixeay)
+[8\. Run the ArchR Singularity container on UPPMAX  8](#8. Run the ArchR Singularity container on UPPMAX)
 
 * * * * *
 
