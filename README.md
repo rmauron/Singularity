@@ -2,11 +2,11 @@
 
 * * * * *
 
-Date: March, the 6th 2023
+Date: March 2023
 
 Note from: Raphaël Mauron (<raphael.mauron@gmail.com>)
 
-* * * * *
+
 
 ## Goals:
 ------
@@ -21,7 +21,6 @@ Note from: Raphaël Mauron (<raphael.mauron@gmail.com>)
 
 Being able to run and share scripts with all their dependencies on your machine or on HPCs.
 
-* * * * *
 
 ## Resources from UPPMAX IT:
 -------------------------
@@ -34,7 +33,6 @@ If have accounts and active project on Alvis or Rackham, able to build on the cl
 
 Complete UPPMAX workshop material: <https://pmitev.github.io/UPPMAX-Singularity-workshop/>
 
-* * * * *
 
 
 0.  Why is all this needed?
@@ -46,7 +44,6 @@ Virtualisation allows the creation of virtual machines (VM) which are isolated a
 
 In this recipe, Vagrant is the tool used to create and manage those environments. It allows to create a VirtualBox VM in very simple steps.
 
-* * * * *
 
 0.1 Singularity
 ---------------
@@ -57,14 +54,14 @@ A Singularity container is like every other container, hence an isolated operati
 
 Singularity containers, once built, can be saved for further run or can be shared. Anyone with access to the container can use it independently on its own system to run the application with the exact same versions of each dependency.
 
-* * * * *
+
 
 1.  Install Singularity on your machine:
     ------------------------------------
 
 (for Mac with Intel-64)
 
-1.  Install homebrew (if not already installed):
+  Install homebrew (if not already installed):
 
 <https://brew.sh/>
 
@@ -76,7 +73,7 @@ Or simply:
 
  
 
-1.  Install virtualbox, vagrant and vagrant-manager:
+  Install virtualbox, vagrant and vagrant-manager:
 
 
 
@@ -96,12 +93,12 @@ Once VirtualBox installed you can run the following command:
 
  
 
-* * * * *
 
-1.  Create a temporary VM with vagrant for building Singularity containers
+
+2.  Create a temporary VM with vagrant for building Singularity containers
     ----------------------------------------------------------------------
 
-1.  Create and enter a directory to be used with your Vagrant VM:
+  Create and enter a directory to be used with your Vagrant VM:
 
 
 
@@ -112,7 +109,7 @@ Once VirtualBox installed you can run the following command:
 
 (if it is the first time, skip point 1.4)
 
-1.  Destroy and remove vagrant vagrant file:
+  Destroy and remove vagrant vagrant file:
 
 If you have already created and used this folder for another VM, you will need to destroy the VM and delete the Vagrantfile:
 
@@ -123,7 +120,7 @@ If you have already created and used this folder for another VM, you will need t
 
  
 
-1.  Bring up the virtual machine:
+  Bring up the virtual machine:
 
 Inside the created new repository, create the Vagrantfile with these steps:
 
@@ -167,7 +164,7 @@ Access the VM with:
 
  
 
-1.  Check version installed:
+  Check version installed:
 
 
 ```
@@ -182,9 +179,9 @@ vagrant@vagrant:~$  singularity version\
 
 If you reach this point, you are all set up to build your Singularity container.
 
-* * * * *
 
-1.  Build Singularity container
+
+3.  Build Singularity container
     ---------------------------
 
 Once in the Singularity VM, you can build a Singularity container.
@@ -239,9 +236,9 @@ Once back on the vagrant terminal, build the container:
 
 If everything goes smoothly, you should now have the .def and .sif files. The .def is the definition file where we specified all the dependencies. The .sif is the actual container that we want to run.
 
-* * * * *
 
-1.  Run Singularity container
+
+4.  Run Singularity container
     -------------------------
 
 With the Singularity container built, you can run it. Try the lolcow tutorial.
@@ -256,9 +253,9 @@ It should make you laugh.
 
 But here is the idea behind running a Singularity container.
 
-* * * * *
 
-1.  Stop and destroy the VM
+
+5.  Stop and destroy the VM
     -----------------------
 
 You can stop the VM with:
@@ -277,9 +274,9 @@ You might want to destroy the VM. You can do it with (after having stopped it be
 
  
 
-* * * * *
 
-1.  Prerequisites for running graphical programs remotely with Xquartz
+
+6.  Prerequisites for running graphical programs remotely with Xquartz
     ------------------------------------------------------------------
 
 In case of R applications, graphical desktops are more handy. For it, follow the instructions below. This is required to run the ArchR container. <https://www.cyberciti.biz/faq/apple-osx-mountain-lion-mavericks-install-xquartz-server/>
@@ -304,7 +301,7 @@ Reboot mac:
 
 * * * * *
 
-1.  Run Singularity container on HPC
+7.  Run Singularity container on HPC
     --------------------------------
 
 You have to enable the X11 forwarding so we use the "-Y" command when connecting to the HPC:
@@ -323,9 +320,9 @@ Or more practically when connecting to UPPMAX:
 
  
 
-* * * * *
 
-1.  Run the ArchR Singularity container on UPPMAX
+
+8.  Run the ArchR Singularity container on UPPMAX
     ---------------------------------------------
 
 From the entry page a.k.a your user directory, run:
@@ -338,4 +335,4 @@ From the entry page a.k.a your user directory, run:
 
 The XQuartz window should open the RStudio desktop where you can run any script but with the packages (version dependent) needed for this specific application.
 
-* * * * *
+
