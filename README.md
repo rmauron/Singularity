@@ -94,13 +94,14 @@ Once VirtualBox installed you can run the following command:
     brew install --cask vagrant vagrant-manager
 
  
+<br>
 
 
 
 ## Create a temporary VM with vagrant for building Singularity containers
     
 
-  Create and enter a directory to be used with your Vagrant VM:
+  Create and enter a directory to be used with your Vagrant VM (here you can give any name instead of "vm-singularity-ce"):
 
 
 
@@ -180,6 +181,7 @@ vagrant@vagrant:~$  singularity version\
 ! Version more recent than 3.7 is required for UPPMAX.
 
 If you reach this point, you are all set up to build your Singularity container.
+<br>
 
 
 
@@ -255,6 +257,7 @@ It should make you laugh.
 
 But here is the idea behind running a Singularity container.
 
+<br>
 
 
 ## Stop and destroy the VM
@@ -275,6 +278,7 @@ You might want to destroy the VM. You can do it with (after having stopped it be
     vagrant destroy -f
 
  
+<br>
 
 
 
@@ -300,6 +304,7 @@ Reboot mac:
     sudo reboot
 
  
+<br>
 
 
 ## Run Singularity container on HPC
@@ -320,6 +325,7 @@ Or more practically when connecting to UPPMAX:
     ssh -Y username@rackham.uppmax.uu.se
 
  
+<br>
 
 
 
