@@ -82,13 +82,12 @@ Or simply:
     brew  install --cask virtualbox vagrant vagrant-manager
 
  
-
-(note that for M1 or M2 chips, the process can be different so it is not covered here)
+### For M1 and M2
+For M1 or M2 chips, the process can be different so it is not covered here
 
 What I know is that VirtualBox can be installed manually (Developer preview for macOS/ Arm64 (M1/M2) that you can find here: [install VirtualBox for M1/M2 chips](https://www.virtualbox.org/wiki/Downloads).
 
 Once VirtualBox installed you can run the following command:
-
 
 
     brew install --cask vagrant vagrant-manager
@@ -110,7 +109,7 @@ Once VirtualBox installed you can run the following command:
 
  
 
-(if it is the first time, skip point 1.4)
+In case you repeat this recipe within the same directory, you might need to destroy the Vagrantfile to recreate a new one with the following command (if it is the first time, you can skip the "destroy" command).
 
   Destroy and remove vagrant vagrant file:
 
