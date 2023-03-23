@@ -65,7 +65,7 @@ Singularity containers, once built, can be saved for further run or can be share
 
   Install homebrew (if not already installed):
 
-<https://brew.sh/>
+[Install Homebrew](https://brew.sh/)
 
 Or simply:
 
@@ -285,7 +285,7 @@ You might want to destroy the VM. You can do it with (after having stopped it be
 ## Prerequisites for running graphical programs remotely with Xquartz
     
 
-In case of R applications, graphical desktops are more handy. For it, follow the instructions below. This is required to run the ArchR container. [ArchR container](https://www.cyberciti.biz/faq/apple-osx-mountain-lion-mavericks-install-xquartz-server)
+In case of R applications, graphical desktops are more handy. For it, follow the instructions below. This is required to run the ArchR container. [Install Xquartz](https://www.cyberciti.biz/faq/apple-osx-mountain-lion-mavericks-install-xquartz-server)
 
 Or follow those instructions:
 
