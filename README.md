@@ -151,30 +151,32 @@ end
 
 Once you are back on the terminal, run to force vagrant to recreate the vm:
 
-|
 
-$  vagrant up --provision
 
- |
+    $  vagrant up --provision
+
+ 
 
 If everything ran smoothly, it means you created the VM.
 
 Access the VM with:
 
-|
 
-$  vagrant ssh
 
- |
+    $  vagrant ssh
+
+ 
 
 1.  Check version installed:
 
-|
 
+```
 vagrant@vagrant:~$  singularity version\
 3.8.0
+```
 
- |
+
+ 
 
 ! Version more recent than 3.7 is required for UPPMAX.
 
@@ -189,26 +191,26 @@ Once in the Singularity VM, you can build a Singularity container.
 
 First change directory:
 
-|
 
-$  cd /vagrant
 
- |
+    $  cd /vagrant
+
+ 
 
 With the example from UPPMAX workshop:
 
 Create the definition file. It is where you specify which tool to use, the version of them, all the dependencies, and so on. Usually, the user do not have all the permissions to create files, hence we use "vi" instead of "vim" in this case. Note that here, you can name your definition file as you wish.
 
-|
 
-$ vi lolcow.def
 
- |
+    $ vi lolcow.def
+
+ 
 
 Paste and type ":wq"
 
-|
 
+```
 BootStrap: docker\
 From: ubuntu:16.04
 
@@ -221,19 +223,19 @@ From: ubuntu:16.04
  export  PATH=/usr/games:$PATH
 
 %runscript\
-  fortune | cowsay | lolcat
-
- |
+  fortune | cowsay | lolcat
+```
+ 
 
 The definition file used for the tool ArchR software is visible here: <https://github.com/rmauron/Singularity/blob/cee4b188bbec5b85470674b874ad2f534ccc2dce/ArchR/ArchR.def>
 
 Once back on the vagrant terminal, build the container:
 
-|
 
-$ sudo  singularity  build lolcow.sif lolcow.def
 
- |
+    $ sudo  singularity  build lolcow.sif lolcow.def
+
+ 
 
 If everything goes smoothly, you should now have the .def and .sif files. The .def is the definition file where we specified all the dependencies. The .sif is the actual container that we want to run.
 
@@ -244,11 +246,11 @@ If everything goes smoothly, you should now have the .def and .sif files. The .d
 
 With the Singularity container built, you can run it. Try the lolcow tutorial.
 
-|
 
-$ ./lolcow.sif
 
- |
+    $ ./lolcow.sif
+
+ 
 
 It should make you laugh.
 
@@ -261,19 +263,19 @@ But here is the idea behind running a Singularity container.
 
 You can stop the VM with:
 
-|
 
-$ vagrant halt
 
- |
+    $ vagrant halt
+
+ 
 
 You might want to destroy the VM. You can do it with (after having stopped it beforehand):
 
-|
 
-$ vagrant destroy -f
 
- |
+    $ vagrant destroy -f
+
+ 
 
 * * * * *
 
@@ -286,19 +288,19 @@ Or follow those instructions:
 
 Install Xquartz to allow X11 forwarding:
 
-|
 
-$  brew install --cask xquartz
 
- |
+    $  brew install --cask xquartz
+
+ 
 
 Reboot mac:
 
-|
 
-$ sudo reboot
 
- |
+    $ sudo reboot
+
+ 
 
 * * * * *
 
@@ -307,19 +309,19 @@ $ sudo reboot
 
 You have to enable the X11 forwarding so we use the "-Y" command when connecting to the HPC:
 
-|
 
-$  ssh -Y user@server-ip
 
- |
+    $  ssh -Y user@server-ip
+
+ 
 
 Or more practically when connecting to UPPMAX:
 
-|
 
-$ ssh -Y username@rackham.uppmax.uu.se
 
- |
+    $ ssh -Y username@rackham.uppmax.uu.se
+
+ 
 
 * * * * *
 
@@ -328,11 +330,11 @@ $ ssh -Y username@rackham.uppmax.uu.se
 
 From the entry page a.k.a your user directory, run:
 
-|
 
-$ singularity run /tmp/ArchR-20.04.sif
 
- |
+    $ singularity run /tmp/ArchR-20.04.sif
+
+ 
 
 The XQuartz window should open the RStudio desktop where you can run any script but with the packages (version dependent) needed for this specific application.
 
