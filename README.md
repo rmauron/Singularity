@@ -1,6 +1,5 @@
 # Recipe for Singularity
 
-* * * * *
 
 Date: March 2023
 
