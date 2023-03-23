@@ -72,7 +72,7 @@ Or simply:
 
 |
 
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
  |
 
@@ -80,7 +80,7 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 
 |
 
-$  brew  install --cask virtualbox vagrant vagrant-manager
+    $  brew  install --cask virtualbox vagrant vagrant-manager
 
  |
 
@@ -92,7 +92,7 @@ Once VirtualBox installed you can run the following command:
 
 |
 
-$  brew install --cask vagrant vagrant-manager
+    $  brew install --cask vagrant vagrant-manager
 
  |
 
@@ -105,8 +105,8 @@ $  brew install --cask vagrant vagrant-manager
 
 |
 
-$  mkdir  vm-singularity-ce && \\
- cd  vm-singularity-ce
+    $  mkdir  vm-singularity-ce && \\
+     cd  vm-singularity-ce
 
  |
 
@@ -118,8 +118,8 @@ If you have already created and used this folder for another VM, you will need t
 
 |
 
-$ vagrant destroy && \\
-    rm Vagrantfile
+    $ vagrant destroy && \\
+        rm Vagrantfile
 
  |
 
