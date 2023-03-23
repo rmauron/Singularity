@@ -27,11 +27,11 @@ Being able to run and share scripts with all their dependencies on your machine 
 
 All you need to do is described on this recipe but if more resources are needed, here you have interesting links.
 
-Guidelines for installing Singularity on your computer: <https://pmitev.github.io/UPPMAX-Singularity-workshop/installation/>
+Guidelines for [installing Singularity on your computer](https://pmitev.github.io/UPPMAX-Singularity-workshop/installation/)
 
-If have accounts and active project on Alvis or Rackham, able to build on the clusters directly: <https://pmitev.github.io/UPPMAX-Singularity-workshop/fakeroot/>
+If have accounts and active project on Alvis or Rackham, able to build on the clusters directly: [build on Rackham](https://pmitev.github.io/UPPMAX-Singularity-workshop/fakeroot/)
 
-Complete UPPMAX workshop material: <https://pmitev.github.io/UPPMAX-Singularity-workshop/>
+[Complete UPPMAX workshop material](https://pmitev.github.io/UPPMAX-Singularity-workshop)
 <br>
 
 
@@ -85,7 +85,7 @@ Or simply:
 
 (note that for M1 or M2 chips, the process can be different so it is not covered here)
 
-What I know is that VirtualBox can be installed manually (Developer preview for macOS/ Arm64 (M1/M2) that you can find here: <https://www.virtualbox.org/wiki/Downloads>). 
+What I know is that VirtualBox can be installed manually (Developer preview for macOS/ Arm64 (M1/M2) that you can find here: [install VirtualBox for M1/M2 chips](https://www.virtualbox.org/wiki/Downloads).
 
 Once VirtualBox installed you can run the following command:
 
@@ -228,7 +228,7 @@ From: ubuntu:16.04
 ```
  
 
-The definition file used for the tool ArchR software is visible here: <https://github.com/rmauron/Singularity/blob/cee4b188bbec5b85470674b874ad2f534ccc2dce/ArchR/ArchR.def>
+The definition file used for the tool ArchR software is visible here: [ArchR definition file](https://github.com/rmauron/Singularity/blob/cee4b188bbec5b85470674b874ad2f534ccc2dce/ArchR/ArchR.def)
 
 Once back on the vagrant terminal, build the container:
 
@@ -285,7 +285,7 @@ You might want to destroy the VM. You can do it with (after having stopped it be
 ## Prerequisites for running graphical programs remotely with Xquartz
     
 
-In case of R applications, graphical desktops are more handy. For it, follow the instructions below. This is required to run the ArchR container. <https://www.cyberciti.biz/faq/apple-osx-mountain-lion-mavericks-install-xquartz-server/>
+In case of R applications, graphical desktops are more handy. For it, follow the instructions below. This is required to run the ArchR container. [ArchR container](https://www.cyberciti.biz/faq/apple-osx-mountain-lion-mavericks-install-xquartz-server)
 
 Or follow those instructions:
 
