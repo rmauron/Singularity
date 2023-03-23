@@ -289,9 +289,6 @@ In case of R applications, graphical desktops are more handy. For it, follow the
 
 Or follow those instructions:
 
-Install Xquartz to allow X11 forwarding:
-
-
 
     brew install --cask xquartz
 
