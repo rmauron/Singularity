@@ -36,38 +36,6 @@ Complete UPPMAX workshop material: <https://pmitev.github.io/UPPMAX-Singularity-
 
 * * * * *
 
-## Table of Contents
------------------
-
-[Goals:  1](#Goals:)
-
-[Resources from UPPMAX IT:  1](#Resources from UPPMAX IT:)
-
-[Table of Contents  2](#Table of Contents)
-
-[0\. Why is all this needed?  3](#0.  Why is all this needed?)
-
-[0.1 Singularity  3](#0.1 Singularity)
-
-[1\. Install Singularity on your machine:  3](#1. Install Singularity on your machine:)
-
-[2\. Create a temporary VM with vagrant for building Singularity containers  4](#2. Create a temporary VM with vagrant for building Singularity containers)
-
-[3\. Build Singularity container  5](#3. Build Singularity container)
-
-[4\. Run Singularity container  7](#4. Run Singularity container)
-
-[5\. Stop and destroy the VM  7](#5. Stop and destroy the VM)
-
-[6\. Prerequisites for running graphical programs remotely with Xquartz  7](#6. Prerequisites for running graphical programs remotely with Xquartz)
-
-[7\. Run Singularity container on HPC  8](#7. Run Singularity container on HPC)
-
-[8\. Run the ArchR Singularity container on UPPMAX  8](#8. Run the ArchR Singularity container on UPPMAX)
-
-* * * * *
-
--------------
 
 0.  Why is all this needed?
 ---------------------------
