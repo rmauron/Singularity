@@ -131,7 +131,7 @@ Inside the created new repository, create the Vagrantfile with these steps:
 
 
 
-The following code is a base for the Vagrantfile. Specify the path/to/destination on the hose and the path/from/vm in the vim. 
+The following code is a base for the Vagrantfile. Specify the path/to/destination on the host and the path/from/vm in the vim. 
 
 When it is done, type ":wq" which stands for "write quit".
 
