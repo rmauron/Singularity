@@ -38,9 +38,9 @@ If have accounts and active project on Alvis or Rackham, able to build on the cl
 ## 1.3 Why is all this needed?
 
 
-Virtualisation is the technology which allows to create independent environments from your machine. It has many functionalities, like running various systems or applications on a single machine, sharing resources (e.g. processors, memory, etc.)
+Virtualization is the technology which allows to create independent environments from your machine. It has many functionalities, like running various systems or applications on a single machine, sharing resources (e.g. processors, memory, etc.)
 
-Virtualisation allows the creation of virtual machines (VM) which are isolated and autonomous informatic environments with their own operating systems. Without going into the details, this virtualisation is important in the scope of this tutorial because Singularity runs only on Linux systems. We will install and use a VM with Ubuntu in order to use Singularity.
+Virtualization allows the creation of virtual machines (VM) which are isolated and autonomous informatic environments with their own operating systems. Without going into the details, this virtualization is important in the scope of this tutorial because Singularity runs only on Linux systems. We will install and use a VM with Ubuntu in order to use Singularity.
 
 In this recipe, Vagrant is the tool used to create and manage those environments. It allows to create a VirtualBox VM in very simple steps.
 <br>
