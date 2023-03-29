@@ -1,4 +1,4 @@
-# 1. Recipe for Singularity
+# Recipe for Singularity
 
 
 Date: March 2023
