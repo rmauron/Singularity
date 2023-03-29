@@ -103,8 +103,7 @@ Once VirtualBox installed you can run the following command:
 
 
 
-    mkdir  vm-singularity-ce && \\
-     cd  vm-singularity-ce
+    mkdir vm-singularity-ce && cd vm-singularity-ce
 
 
 
@@ -116,8 +115,7 @@ If you have already created and used this folder for another VM, you will need t
 
 
 
-    vagrant destroy && \\
-        rm Vagrantfile
+    vagrant destroy && rm Vagrantfile
 
 
 
