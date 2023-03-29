@@ -255,7 +255,7 @@ It should make you laugh.
 But here is the idea behind running a Singularity container.
 
 <br>
-To quit the VM, type `control + D`
+To quit the VM, type `control + D`.
 <br>
 
 
