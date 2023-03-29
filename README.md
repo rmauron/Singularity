@@ -167,7 +167,7 @@ Access the VM with:
 
 
 ```
-vagrant@vagrant:~$  singularity version\
+vagrant@vagrant:~$  singularity version
 3.8.0
 ```
 
