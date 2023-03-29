@@ -78,7 +78,7 @@ Or simply:
 
 
 
-    brew  install --cask virtualbox vagrant vagrant-manager
+    brew install --cask virtualbox vagrant vagrant-manager
 
 
 ### 1.5.3 For M1 and M2
@@ -103,7 +103,8 @@ Once VirtualBox installed you can run the following command:
 
 
 
-    mkdir vm-singularity-ce && cd vm-singularity-ce
+    mkdir vm-singularity-ce && \
+      cd vm-singularity-ce
 
 
 
@@ -115,7 +116,8 @@ If you have already created and used this folder for another VM, you will need t
 
 
 
-    vagrant destroy && rm Vagrantfile
+    vagrant destroy && \
+      rm Vagrantfile
 
 
 
@@ -135,12 +137,11 @@ When it is done, type ":wq" which stands for "write quit".
 
 
 ```
-Vagrant.configure("2") do |config|\
+Vagrant.configure("2") do |config|
   config.vm.box = "sylabs/singularity-ce-3.8-ubuntu-bionic64"
 
   #share files "path/to/destination", "path/from/vm"
-
-  config.vm.synced_folder "./", "/vagrant"\
+  config.vm.synced_folder "./", "/vagrant"
 end
 ```
 
@@ -167,7 +168,7 @@ Access the VM with:
 
 
 ```
-vagrant@vagrant:~$  singularity version
+vagrant@vagrant:~$ singularity version
 3.8.0
 ```
 
@@ -208,18 +209,18 @@ Paste and type ":wq"
 
 
 ```
-BootStrap: docker\
+BootStrap: docker
 From: ubuntu:16.04
 
-%post\
-  apt-get -y update\
+%post
+  apt-get -y update
   apt-get -y install fortune cowsay lolcat
 
-%environment\
- export  LC_ALL=C\
- export  PATH=/usr/games:$PATH
+%environment
+ export LC_ALL=C
+ export PATH=/usr/games:$PATH
 
-%runscript\
+%runscript
   fortune | cowsay | lolcat
 ```
 
@@ -230,7 +231,7 @@ Once back on the vagrant terminal, build the container:
 
 
 
-    sudo  singularity  build lolcow.sif lolcow.def
+    sudo singularity build lolcow.sif lolcow.def
 
 
 
