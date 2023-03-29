@@ -1,4 +1,4 @@
-# Recipe for Singularity
+# 1. Recipe for Singularity
 
 
 Date: March 2023
@@ -8,7 +8,7 @@ Note from: Raphaël Mauron (<raphael.mauron@gmail.com>)
 
 
 
-## Goals
+## 1.1 Goals
 
 -   Install Singularity
 
@@ -22,7 +22,7 @@ Being able to run and share scripts with all their dependencies on your machine 
 <br>
 
 
-## Resources from UPPMAX IT
+## 1.2 Resources from UPPMAX IT
 
 
 All you need to do is described on this recipe but if more resources are needed, here you have interesting links.
@@ -35,7 +35,7 @@ If have accounts and active project on Alvis or Rackham, able to build on the cl
 <br>
 
 
-## Why is all this needed?
+## 1.3 Why is all this needed?
 
 
 Virtualisation is the technology which allows to create independent environments from your machine. It has many functionalities, like running various systems or applications on a single machine, sharing resources (e.g. processors, memory, etc.)
@@ -46,7 +46,7 @@ In this recipe, Vagrant is the tool used to create and manage those environments
 <br>
 
 
-## Singularity
+## 1.4 Singularity
 
 
 Singularity is a container virtualization tool made for scientific applications and high performance computing. It is compatible with Docker Images but does not allow for administrative privileges which facilitates the management of HPC clusters. Essentially, the waiting queue system is respected with Singularity while it is not with Docker.
@@ -58,12 +58,12 @@ Singularity containers, once built, can be saved for further run or can be share
 
 
 
-## Install Singularity on your machine:
-    
+## 1.5 Install Singularity on your machine:
+
 
 (for Mac with Intel-64)
 
-### Install homebrew (if not already installed):
+### 1.5.1 Install homebrew (if not already installed):
 
 [Install Homebrew](https://brew.sh/)
 
@@ -73,15 +73,15 @@ Or simply:
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
- 
-### Install virtualbox, vagrant and vagrant-manager:
+
+### 1.5.2 Install virtualbox, vagrant and vagrant-manager:
 
 
 
     brew  install --cask virtualbox vagrant vagrant-manager
 
- 
-### For M1 and M2
+
+### 1.5.3 For M1 and M2
 For M1 or M2 chips, the process can be different so it is not covered here
 
 What I know is that VirtualBox can be installed manually (Developer preview for macOS/ Arm64 (M1/M2) that you can find here: [install VirtualBox for M1/M2 chips](https://www.virtualbox.org/wiki/Downloads).
@@ -91,13 +91,13 @@ Once VirtualBox installed you can run the following command:
 
     brew install --cask vagrant vagrant-manager
 
- 
+
 <br>
 
 
 
-## Create a temporary VM with vagrant for building Singularity containers
-    
+## 1.6 Create a temporary VM with vagrant for building Singularity containers
+
 
   Create and enter a directory to be used with your Vagrant VM (here you can give any name instead of "vm-singularity-ce"):
 
@@ -106,7 +106,7 @@ Once VirtualBox installed you can run the following command:
     mkdir  vm-singularity-ce && \\
      cd  vm-singularity-ce
 
- 
+
 
 In case you repeat this recipe within the same directory, you might need to destroy the Vagrantfile to recreate a new one with the following command (if it is the first time, you can skip the "destroy" command).
 
@@ -119,7 +119,7 @@ If you have already created and used this folder for another VM, you will need t
     vagrant destroy && \\
         rm Vagrantfile
 
- 
+
 
   Bring up the virtual machine:
 
@@ -129,7 +129,7 @@ Inside the created new repository, create the Vagrantfile with these steps:
 
     vim Vagrantfile
 
- 
+
 
 The following code is a base for the Vagrantfile. Specify the path/to/destination on the hose and the path/from/vm in the vim. 
 
@@ -145,7 +145,7 @@ Vagrant.configure("2") do |config|\
   config.vm.synced_folder "./", "/vagrant"\
 end
 ```
- 
+
 
 Once you are back on the terminal, run to force vagrant to recreate the vm:
 
@@ -153,7 +153,7 @@ Once you are back on the terminal, run to force vagrant to recreate the vm:
 
     vagrant up --provision
 
- 
+
 
 If everything ran smoothly, it means you created the VM.
 
@@ -163,7 +163,7 @@ Access the VM with:
 
     vagrant ssh
 
- 
+
 
   Check version installed:
 
@@ -174,7 +174,7 @@ vagrant@vagrant:~$  singularity version\
 ```
 
 
- 
+
 
 ! Version more recent than 3.7 is required for UPPMAX.
 
@@ -183,8 +183,8 @@ If you reach this point, you are all set up to build your Singularity container.
 
 
 
-## Build Singularity container
-    
+## 1.7 Build Singularity container
+
 
 Once in the Singularity VM, you can build a Singularity container.
 
@@ -194,7 +194,7 @@ First change directory:
 
     cd /vagrant
 
- 
+
 
 With the example from UPPMAX workshop:
 
@@ -204,7 +204,7 @@ Create the definition file. It is where you specify which tool to use, the versi
 
     vi lolcow.def
 
- 
+
 
 Paste and type ":wq"
 
@@ -224,7 +224,7 @@ From: ubuntu:16.04
 %runscript\
   fortune | cowsay | lolcat
 ```
- 
+
 
 The definition file used for the tool ArchR software is visible here: [ArchR definition file](https://github.com/rmauron/Singularity/blob/cee4b188bbec5b85470674b874ad2f534ccc2dce/ArchR/ArchR.def)
 
@@ -234,14 +234,14 @@ Once back on the vagrant terminal, build the container:
 
     sudo  singularity  build lolcow.sif lolcow.def
 
- 
+
 
 If everything goes smoothly, you should now have the .def and .sif files. The .def is the definition file where we specified all the dependencies. The .sif is the actual container that we want to run.
 
 
 
 ##Run Singularity container
-    
+
 
 With the Singularity container built, you can run it. Try the lolcow tutorial.
 
@@ -249,7 +249,7 @@ With the Singularity container built, you can run it. Try the lolcow tutorial.
 
     ./lolcow.sif
 
- 
+
 
 It should make you laugh.
 
@@ -258,8 +258,8 @@ But here is the idea behind running a Singularity container.
 <br>
 
 
-## Stop and destroy the VM
-    
+## 1.8 Stop and destroy the VM
+
 
 You can stop the VM with:
 
@@ -267,7 +267,7 @@ You can stop the VM with:
 
     vagrant halt
 
- 
+
 
 You might want to destroy the VM. You can do it with (after having stopped it beforehand):
 
@@ -275,13 +275,13 @@ You might want to destroy the VM. You can do it with (after having stopped it be
 
     vagrant destroy -f
 
- 
+
 <br>
 
 
 
-## Prerequisites for running graphical programs remotely with Xquartz
-    
+## 1.9 Prerequisites for running graphical programs remotely with Xquartz
+
 
 In case of R applications, graphical desktops are more handy. For it, follow the instructions below. This is required to run the ArchR container. [Install Xquartz](https://www.cyberciti.biz/faq/apple-osx-mountain-lion-mavericks-install-xquartz-server)
 
@@ -290,7 +290,7 @@ Or follow those instructions:
 
     brew install --cask xquartz
 
- 
+
 
 Reboot mac:
 
@@ -298,12 +298,12 @@ Reboot mac:
 
     sudo reboot
 
- 
+
 <br>
 
 
-## Run Singularity container on HPC
-    
+## 1.10 Run Singularity container on HPC
+
 
 You have to enable the X11 forwarding so we use the "-Y" command when connecting to the HPC:
 
@@ -311,7 +311,7 @@ You have to enable the X11 forwarding so we use the "-Y" command when connecting
 
     ssh -Y user@server-ip
 
- 
+
 
 Or more practically when connecting to UPPMAX:
 
@@ -319,13 +319,13 @@ Or more practically when connecting to UPPMAX:
 
     ssh -Y username@rackham.uppmax.uu.se
 
- 
+
 <br>
 
 
 
-## Run the ArchR Singularity container on UPPMAX
-    
+## 1.11 Run the ArchR Singularity container on UPPMAX
+
 
 From the entry page a.k.a your user directory, run:
 
@@ -333,7 +333,7 @@ From the entry page a.k.a your user directory, run:
 
     singularity run /tmp/ArchR-20.04.sif
 
- 
+
 
 The XQuartz window should open the RStudio desktop where you can run any script but with the packages (version dependent) needed for this specific application.
 
